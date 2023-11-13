@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+        <button type="button"  onclick="monkey()">猴子數來寶</button>
+        
+        <div  id="result">
+         
+      
+         
+         
+          </div>
+        
+        
+
+        <script>
+            function monkey(){
+                var d=new Date();
+                var w=d.getDay();
+                var str=""
+
+                switch(w){
+                    case 1:
+                        str="今天星期一，猴子穿新衣";
+                        break;
+                    case 2:
+                        str="今天星期二，猴子肚子餓";
+                        break;
+                    case 3:
+                        str="今天星期三，猴子去爬山";
+                        break;
+                    case 4:
+                        str="今天星期四，猴子去考試";
+                        break;
+                    case 5:
+                        str="今天星期五，猴子去跳舞";
+                        break;
+                    case 6:
+                        str="今天星期六，猴子去斗六";
+                        break;
+                    case 0:
+                        str="今天星期日，猴子過生日";
+                        break;
+                }
+            document.getElementById('result').innerHTML="今天是" + d.toLocaleString() + "<br>"
+                                                       + str + "<br>" 
+                                                       +"<img src='images/monkey/monkey"+ w +".png'>"
+            
+            }
+
+            
+        </script>
+
+        
+      
+    
+</body>
+</html>

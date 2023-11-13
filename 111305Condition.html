@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <div class="mb-3">
+          <label for="name" >姓名 </label>
+          <input type="text"  id="name" name="name"  value="學生">
+        </div>
+        <div class="mb-3">
+          <label for="h" >身高(cm) </label>
+          <input type="number" id="h" name="h" >
+        </div>
+        <div class="mb-3">
+          <label for="w" >體重(kg) </label>
+          <input type="number" id="w" name="w" >
+        </div>
+        <div  id="gender">
+            <input type="radio" id="m" name="gender" value="男">男</input>
+            <input type="radio" id="f" name="gender" value="女">女</input>
+        </div>
+
+
+
+        <button type="button"  onclick="standard()">計算標準體重</button>
+        <button type="button"  onclick="bmi()">計算身體質量指數</button>
+        <div  id="result">
+         
+      
+         
+         
+          </div>
+    </form>
+        
+
+        <script>
+            function standard() {
+                var name = document.getElementById("name").value;
+                //var chi = Number.parseInt(document.getElementById("chi").value);
+                var h = document.getElementById("h").value;
+                var w = document.getElementById("w").value;
+            
+            
+                var std, upper, lower;
+                var str="";
+                var result = document.getElementById("result");
+
+                if (document.getElementById("m").checked){
+                    gender="男";
+                   std = (h-80) * 0.7;}
+                else if((document.getElementById("f").checked)) {
+                     gender="女";
+                     std =(h-70) * 0.6;}
+
+                
+                upper=std*1.1;
+                lower=std*0.9;
+                
+
+                if (w>upper){
+                    str = "少吃多動"
+                }
+                else if(w<lower){
+                    str = "多吃一點"
+                }
+                else{
+                    str ="GOOD"
+                }
+
+                result.innerHTML= "姓名: "+name+ "<br>"
+                                +"身高: "+h+ "<br>"
+                                +"體重: "+w+ "<br>"
+                                +"性別1: "+gender+ "<br>"
+                                
+                                +"標準體重: "+std.toFixed(1)+ "<br>"
+                                +"體重上限: "+upper.toFixed(1)+ "<br>"
+                                +"體重下限: "+lower.toFixed(1)+"<br>"
+                                +"建議: " + str +"<br>"
+
+                                       // document.write(test);
+                // console.log(test); 
+            }
+        function bmi(){
+            var h = document.getElementById("h").value;
+            var w = document.getElementById("w").value;
+            //var calculus = w/((h/100)^2) 這是錯的
+            var bmi = w/Math.pow(h/100, 2)
+            var str = ""
+            if  (calculus< 18.5)
+                str = "過輕"
+            else if (calculus < 24) 
+                str = "正常"
+            else if (calculus < 27) 
+                str = "過重"
+            else if (calculus < 30)
+                str = "輕肥"
+            else if (calculus < 35) 
+                str = "中肥"
+            else
+                str= "重肥"
+            var result = document.getElementById("result");
+            result.innerHTML= "BMI: "+calculus.toFixed(1)+ "<br>"
+                            + "BMI: "+bmi.toFixed(1)+ "<br>"   
+                            + str
+        }
+
+        </script>
+
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+      
+    
+</body>
+</html>

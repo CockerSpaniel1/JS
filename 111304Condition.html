@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+    <form>
+        <div class="mb-3">
+          <label for="name" >姓名 </label>
+          <input type="text"  id="name" name="name"  value="學生">
+        </div>
+        <div class="mb-3">
+          <label for="chi" >國文 </label>
+          <input type="number" id="chi" name="chi" >
+        </div>
+        <div class="mb-3">
+          <label for="eng" >英文 </label>
+          <input type="number" id="eng" name="eng" >
+        </div>
+        <div class="mb-3">
+          <label for="math" >數學 </label>
+          <input type="number"  id="math" name="math" >
+        </div>
+        <button type="button"  onclick="calc()">計算</button>
+        <div  id="result">分數
+        </div>
+      </form>
+        
+        
+        <script>
+            function calc() {
+                var name = document.getElementById("name").value;
+                var chi = Number.parseInt(document.getElementById("chi").value);
+                var eng = Number.parseInt(document.getElementById("eng").value);
+                var math = Number.parseInt(document.getElementById("math").value);
+                var total,avg;
+                var result = document.getElementById("result");
+                var pass="";
+                var remedypass="";
+
+                total = chi+eng+math;
+                avg = total/3;
+
+                if (avg>=60)
+                    pass="及格";
+                else
+                    pass ="不及格";
+                
+                if (avg>=60)
+                    remedypass="通過";
+                else if (avg>=50)
+                    remedypass="補考";
+                else 
+                    remedypass="死當";
+
+              
+
+                result.innerHTML= "姓名: "+name+ "<br>"
+                                +"國文: "+chi+ "<br>"
+                                +"英文: "+eng+ "<br>"
+                                +"數學: "+math+ "<br>"
+                                +"總分: "+total+ "<br>"
+                                +"平均: "+avg.toFixed(1)+ "<br>"
+                                +"評定: "+pass+"<br>"
+                                +"補考: "+remedypass+"<br>";
+
+                                
+
+
+
+                                 
+
+
+                // document.write(test);
+                // console.log(test); 
+            }
+
+        </script>
+
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+      
+    
+</body>
+</html>

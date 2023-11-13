@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Data Type</title>
+    <script>
+        var name="";
+        var chi=0;
+        var eng=0;
+        var math=0;
+        var total=0;
+        var avg=0.0;
+        var isPass=false;
+        var info=null;
+        var stuname=["學生1", "學生2", "學生3"]
+
+        document.write("name 變數的資料型別 :" + typeof(name) + "<br>");
+        document.write("chi 變數的資料型別 :" + typeof(chi) + "<br>");
+        document.write("eng 變數的資料型別 :" + typeof(eng) + "<br>");
+        document.write("math 變數的資料型別 :" + typeof(math) + "<br>");
+        document.write("total 變數的資料型別 :" + typeof(total) + "<br>");
+        document.write("avg  變數的資料型別 :" + typeof(avg) + "<br>");
+        document.write("isPass 變數的資料型別 :" + typeof(isPass) + "<br>");
+        document.write("info 變數的資料型別 :" + typeof(info) + "<br>");
+        document.write("stuname 變數的資料型別 :" + typeof(stuname) + "<br>");
+
+        //document.write(" 變數的資料型別 :" + typeof() + "<br>");
+
+        name="艾呆丸";
+        chi=100;
+        eng=59;
+        math=68;
+        
+        total = chi+ eng +math;
+        avg = total/3;
+            isPass=avg>=60;
+
+        info={
+            "no":1,
+            "name":"艾扣扣",
+            "gender":"男",
+            "birthday":"2000/1/1"
+            }
+
+
+        document.write("<hr>");
+        document.write("學生成績資料 : <br>");
+        document.write("姓名:"+ name + "<br>");
+        document.write("國文:"+ chi + "<br>");
+        document.write("英文:"+ eng + "<br>");
+        document.write("數學:"+ math + "<br>");
+        document.write("總分:"+ total + "<br>");
+        document.write("平均:"+ avg.toFixed(2)+ "<br>");
+        document.write("及格:"+ isPass + "<br>");
+       
+        //document.write(":"+  + "<br>")
+        document.write("<hr>");
+        document.write("學生個人資料 : <br>");
+        document.write("學號:"+ info.no + "<br>");
+        document.write("姓名:"+ info.name + "<br>");
+        document.write("性別:"+ info.gender + "<br>");
+        document.write("生日:"+ info.birthday + "<br>");
+        
+        
+
+        
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
