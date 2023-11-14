@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        body{
+            text-align: center;
+        }
+        #btn{
+        width:100%;
+        padding:1rem;
+
+      }
+        </style>
+     
+    
+  
+</head>
+
+
+
+<body>
+
+<button id="btn" onclick="playStop()">Play</button>
+<img src="images/dog/dog0001.png" id="imgDog">
+    <p id="result">圖片</p>
+<script >
+    var i=1
+    var fileName
+
+    function showImg(){
+        if (i<10) {
+            fileName ="0"+i+".png"
+        }else{
+            fileName = i+".png"
+        }
+
+        document.getElementById("imgDog").src = "images/dog/dog00"+ fileName
+        document.getElementById("result").innerHTML ="第"+i+"張  |" +" dog00" + fileName
+        i++
+
+        if(i == 69){
+            i=1
+        }
+    }
+    function playStop(){
+        var j=0
+        var flag=false
+        if (!flag){
+
+            j=window.setInterval(showImg, 100)
+            
+            document.getElementById("btn").innerHTML="STOPP"+j+flag;
+            //無法變成true
+            flag=true
+        }
+        else{
+            window.alert("test")
+            window.clearInterval(j)
+            document.getElementById("btn").innerHTML="PLAYY"
+            flag=false
+        }
+    }
+
+    //window.setInterval(showImg, 100)
+    
+ 
+</script>
+  
+</body>
+</html>

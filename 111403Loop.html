@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <button type="button" id="loop" onclick="pig()">敲破撲滿(for)</button>
+
+
+
+    <div  id="result">
+        while
+    </div>
+    <hr>
+
+
+    <script>
+        function pig(){
+            var sum = 0;
+            var str = ""
+            var i = 1
+
+            while(i<=10){
+                sum += i
+                str += "第" + i + "天,sum=" + sum + "<br>" 
+                i++
+            }
+            document.getElementById("result").innerHTML = str
+
+        }
+      
+    
+
+    </script>
+</body>
+</html>

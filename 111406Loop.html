@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <button type="button" id="w1" onclick="a()">while</button>
+    <button type="button" id="w2" onclick="b()">do ... while</button>
+
+
+    <div  id="result">
+   
+    </div>
+    <hr>
+
+    <script>
+        function a(){
+            var i = 0
+            var str = ""
+            while(i<0){
+                str = "execute"
+            }
+            document.getElementById("w1").innerHTML = str
+        }
+
+        function b(){
+            var i = 0
+            var str = ""
+            do{str = "execute"
+    
+            }while(i<0)
+            document.getElementById("w2").innerHTML = str
+        }
+
+
+
+
+     
+      
+    
+
+    </script>
+</body>
+</html>

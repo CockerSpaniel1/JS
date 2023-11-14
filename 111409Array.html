@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+  
+</head>
+
+
+
+<body>
+
+
+<script >
+    var  bean = ["阿拉比卡","羅布斯塔", "賴比瑞亞"]
+    document.write("共有 "+ bean.length +"種咖啡豆 <br>")
+    document.write(bean[0]+"<br>")
+    document.write(bean[1]+"<br>")
+    document.write(bean[2]+"<hr>")
+
+    var coffee = ["美式咖啡","經典拿鐵", "抹茶拿鐵", "可可冰沙"]
+    var tea = new Array("紅茶", "綠茶","青茶", "珍波椰" )
+
+    var str = ""
+    document.write("共有" + coffee.length + "種咖啡 <br>")
+    document.write("<ul>")
+    for (i=0; i<coffee.length; i++){
+
+        document.write("<li>" + coffee[i]+"</li>")
+    }
+
+    document.write("</ul>")
+
+    for (e in tea){
+        document.write(tea[e]+"<br>")
+
+    }
+
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <input type="number" id="m" value="5">請輸入數值1<br>
+    <input type="number" id="n" value="2">請輸入數值2<br>
+    <span>請選擇運算方式</span><br>
+    
+
+    <input type="radio" id="r1" name="math" value="+" onclick="calculator(this.value)" >+
+    <input type="radio" id="r2" name="math" value="-" onclick="calculator(this.value)">-
+    <input type="radio" id="r3" name="math" value="*" onclick="calculator(this.value)">*
+    <input type="radio" id="r4" name="math" value="/" onclick="calculator(this.value)">/
+    <div  id="result">
+    </div>
+    <script>
+        function calculator(ob){
+            var m ,n,result
+            m = Number.parseInt(document.getElementById("m").value)
+            n = Number.parseInt(document.getElementById("n").value)
+            result =""
+
+
+            switch(ob){
+                    case "+":
+                        result = m + "+" + n + "=" + (m+n);
+                        break;
+                    case "-":
+                        result = m + "-" + n + "=" + (m-n);
+                        break;
+                    case "*":
+                        result = m + "*" + n + "=" + (m*n);
+                        break;
+                    case "/":
+                        result = m + "/" + n + "=" + (m/n);
+                        break;
+    
+            }
+
+            document.getElementById("result").innerHTML= result
+
+            //document.getElementsByName("math").checked
+
+        }
+
+    </script>
+</body>
+</html>

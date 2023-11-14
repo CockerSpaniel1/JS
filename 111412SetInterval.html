@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        body{
+            text-align: center;
+        }
+        </style>
+
+    
+  
+</head>
+<img src="images/dog/dog0001.png" id="imgDog">
+<p id="result">圖片</p>
+
+
+<body>
+
+
+<script >
+    var i=1
+    var fileName
+
+    function showImg(){
+        if (i<10) {
+            fileName ="0"+i+".png"
+        }else{
+            fileName = i+".png"
+        }
+
+        document.getElementById("imgDog").src = "images/dog/dog00"+ fileName
+        document.getElementById("result").innerHTML ="第"+i+"張  |" +" dog00" + fileName
+        i++
+
+        if(i == 69){
+            i=1
+        }
+    }
+
+
+    //window.setInterval(showImg, 100)
+    
+ 
+</script>
+  
+</body>
+</html>

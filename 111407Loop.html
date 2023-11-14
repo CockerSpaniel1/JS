@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table {
+        width:100%;
+        border: 10px inset #96D4D4;
+        border-collapse: collapse;
+        }
+    th, td{
+        font-size:20px;
+        text-align: center;
+        border: 3px inset #96D4D4;
+        border-collapse: collapse;
+    }
+    </style>
+</head>
+
+
+
+<body>
+
+
+    <script>
+        document.write("<table>")
+        for(i=1; i<=9; i++){
+            
+            document.write("<tr>");
+            
+            for(j=1; j<=9; j++){
+                
+                var k = i * j
+                document.write("<td  onmouseover='setTrBg(this)' onmouseout='clearTrBg(this)' onclick='msg(this)'>")
+                document.write(i + " X " + j + " = " + k + "</td>")
+             
+                }
+            
+            document.write("</tr>")
+            //document.write("<hr>")
+        }
+        document.write("</table>")
+
+        
+
+        function msg(obj){
+            window.alert(obj.innerHTML)
+        }
+        
+        function setTrBg(obj){
+
+            obj.style.backgroundColor="lightpink";
+            obj.style.color="red";
+            obj.style.cursor= "pointer";
+        }
+
+        function clearTrBg(obj){
+            obj.style.backgroundColor="transparent";
+            obj.style.color="black";
+        }
+
+    
+
+    </script>
+</body>
+</html>

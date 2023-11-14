@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    起~<input type="number" id="start" >
+    迄<input type="number" id="end">
+    <button type="button" id="loop" onclick="calculator()">敲破撲滿</button>
+  
+
+
+    <div  id="result">
+   
+    </div>
+    <hr>
+
+    <script>
+
+        function calculator(){
+            var start,end
+            var sum = 0
+            var str = ""
+
+            start = Number.parseInt(document.getElementById("start").value)
+            end = Number.parseInt(document.getElementById("end").value)
+
+            if (start <  end ){
+                for (i=start ;i<=end ;i++){
+                sum += i
+                str += "第" + i + "天,sum=" + sum + "<br>"    
+                
+            }
+            }
+            else if (start >  end ){
+                for (i=end;i<=start ;i++){
+                sum += i
+                str += "第" + i + "天,sum=" + sum + "<br>"    
+               
+            }
+            }else{
+                str = "sum=" +start + "<br>"
+            }
+            
+      
+            document.getElementById("result").innerHTML = str
+
+        }
+      
+    
+
+    </script>
+</body>
+</html>
