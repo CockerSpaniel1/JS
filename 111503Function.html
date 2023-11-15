@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>函數的四種基本狀態</h1>
+
+    <button onclick="greeting1()">無參數,有傳回值</button>
+    <span id="s1"></span><br>
+    
+    <button onclick="greeting2('dog')">有參數,無傳回值</button>
+    <span id="s2"></span><br>
+    
+    <button onclick="s3.innerHTML=greeting3()">無參數,有傳回值</button>
+    <span id="s3"></span><br>
+    
+    <button onclick="s4.innerHTML=greeting4('cat')">有參數,有傳回值</button>
+    <span id="s4"></span><br>
+
+    
+    
+</body>
+<script>
+    function greeting1(){
+        document.getElementById("s1").innerHTML="Good Morning "
+    }
+    function greeting2(name){
+        document.getElementById("s2").innerHTML="Good Morning! " + name
+    }
+    function greeting3(){
+        return "Good Morning"
+    }
+    function greeting4(name){
+        return "Good Morning! "+name
+    }
+</script>
+</html>

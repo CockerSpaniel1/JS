@@ -24,6 +24,8 @@
 <body>
 
 <button id="btn" onclick="playStop()">Play</button>
+<div id="test">TEST</div>
+
 <img src="images/dog/dog0001.png" id="imgDog">
     <p id="result">圖片</p>
 <script >
@@ -44,23 +46,30 @@
         if(i == 69){
             i=1
         }
-    }
-    function playStop(){
-        var j=0
-        var flag=false
-        if (!flag){
+        }
 
-            j=window.setInterval(showImg, 100)
+    var j=0;
+    var flag=false;
+    
+    function playStop(){
+        if (!flag){
+            //document.getElementById("test").innerHTML = "進入if "+flag
+
+            j=window.setInterval(showImg, 50)
             
-            document.getElementById("btn").innerHTML="STOPP"+j+flag;
-            //無法變成true
+            document.getElementById("btn").innerHTML="STOP"
             flag=true
+        
+            //document.getElementById("test").innerHTML = "結束if "+flag
+            
         }
         else{
-            window.alert("test")
+            //document.getElementById("test").innerHTML = "進入else "+flag
+            
             window.clearInterval(j)
-            document.getElementById("btn").innerHTML="PLAYY"
+            document.getElementById("btn").innerHTML="PLAY"
             flag=false
+            //document.getElementById("test").innerHTML = "結束else "+ flag
         }
     }
 

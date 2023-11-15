@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {box-sizing: border-box;}
+    div,button{
+        width:100%;
+        border:0.05em salmon solid;
+        border-radius:1.25em;
+        font-size:1.25em;
+        padding:0.75em;
+        margin-top:0.5em;
+        display:flex;
+        justify-content:center;
+    }
+    </style>
+<body>
+    <h1>函數的四種基本狀態</h1>
+
+    <div id="divMorning">Good Morning</div><br>
+    <div id="divAfternoon">Good Afternoon</div><br>
+    <div id="divLucky">Lucky Number</div><br>
+    <button id="btnStop" style="display:none;">STOP</button><br>
+   
+
+    <input type="button" onclick="remove()" style="width:100%;" >
+    <div id="number">-------</div>
+    
+    
+</body>
+<script>
+    //背景 早安 手形 
+
+    const divMorning= document.getElementById("divMorning")
+    const divAfternoon= document.getElementById("divAfternoon")
+    const divLucky= document.getElementById("divLucky")
+    const btnStop= document.getElementById("btnStop")
+     
+    // const test =[divAfternoon, divLucky, divbtnStop]
+
+    // for (v in test){
+    //     test[v].onmouseover = function(){
+    //         setBg(this);
+    //         this.innerHTML ="早安"
+    //         this.style.cursor= "pointer";
+    //         }
+    //     test[v].onmouseout =  function(){
+    //     clearBg(this);
+    //     this.innerHTML ="Good Morning";
+    //         }       
+    //    }
+
+
+    // divMorning.onclick = function(){
+    //     window.alert("歐嗨喲")
+    // }
+    divMorning.onmouseover = function(){
+        setBg(this);
+        this.innerHTML ="早安"
+        this.style.cursor= "pointer";
+    
+    }
+
+    divMorning.onmouseout = function(){
+        clearBg(this);
+        this.innerHTML ="Good Morning";
+    }
+
+    function setBg(obj){
+        obj.style.backgroundColor = "lightpink";
+    }
+
+    function clearBg(obj){
+        obj.style.backgroundColor = "inherit";
+       
+    }
+    
+    divAfternoon.addEventListener('click',greeting);
+
+    divAfternoon.addEventListener("mouseover", function(){
+        setBg(this)
+        this.innerHTML="午安"
+        this.style.cursor= "pointer"
+    })
+
+    divAfternoon.addEventListener("mouseout", function(){
+        clearBg(this)
+        this.innerHTML="Good Afternoon"
+        
+        this.style.cursor= "pointer"
+    })
+
+    divLucky.addEventListener("mouseover", function(){
+        setBg(this)
+        this.style.height="30vh"
+        this.style.fontSize = "5em"
+        //this.style.padding = "50px"
+        btnStop.style.display = "block"
+    })
+
+    divLucky.addEventListener("mouseout", function(){
+        clearBg(this)
+        //this.style.height="inherit"
+        this.style.fontSize = "1.25em"
+        //btnStop.style.display = "none"
+       
+    })
+    divLucky.addEventListener("mousemove", function (){
+        getNumber()
+        //this.innerHTML= getNumber()
+    })
+
+
+    //divLucky.addEventListener("dblclick", removeListener())
+     
+    
+    function remove() {
+        divLucky.removeEventListener("mousemove", getNumber)
+        window.alert("test")
+        }
+    // function removeListener(){
+    //     //divLucky.removeEventListener("mousemove", getNumber)
+    //     divLucky.removeEventListener("mouseover", function)
+    // }
+
+    function getNumber(){
+        var r =Math.random()
+        var c =Math.ceil(48 * r + 1)
+        divLucky.innerHTML = c
+        //return c
+    }
+
+
+
+
+    function greeting(){
+        window.alert("test")
+    }
+    
+// var r =Math.random()
+// var c =Math.ceil(48 * r + 1    )
+// var f =Math.floor(49 * r + 1  )
+// var f =Math.ceil(0.95)
+// var str= ""
+// document.getElementById("number").innerHTML ="Floor" + 
+// for(i=0; i<=10; i++) {
+//     var r =Math.random()
+//     var number = Math.ceil(48 * r +1)
+//     str=r + "number"
+    
+// }
+
+    
+</script>
+</html>

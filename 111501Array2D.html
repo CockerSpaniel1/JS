@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 2D Array</title>
+</head>
+    <style>
+        body {
+            text-align: center;
+        }
+        table{
+            width:100%;
+            border: 10px inset #96D4D4;
+        }
+        th, td{
+            font-size:20px;
+            text-align: center;
+            padding: 0.5rem;
+            border: 3px inset #96D4D4;
+            border-collapse: collapse;
+        }
+        img{
+            width:50%;
+        }
+        </style>
+
+<body>
+    
+</body>
+<script>
+    var bean = new Array(["arabica","阿拉比卡咖啡","原產於東非伊索比亞南部的阿比西 尼亞高原，現今沿海尚有野生種。"],
+    ["robusta" , "羅布斯塔咖啡","羅布斯塔咖啡屬於剛果咖啡的突變 種，原產於西非剛果，本種有缺乏香氣之 憾，苦味較強，酸味不足。"],
+    ["liberia","利比亞咖啡","原產於西非利比亞，本種香味不佳， 苦味較強。除少數生產國自己消費外，只 有歐洲人飲用利比亞咖啡。"])
+    
+    // document.write(bean[0][0] + "<br>")
+    // document.write(bean[0][1] + "<br>")
+    // document.write(bean[0][2] + "<br>")
+    // document.write(bean[1][0] + "<br>")
+    // document.write(bean[1][1] + "<br>")
+    // document.write(bean[1][2] + "<br>")
+    // document.write(bean[2][0] + "<br>")
+    // document.write(bean[2][1] + "<br>")
+    // document.write(bean[2][2] + "<br>")
+    
+    document.write("<table>")
+    for (i in bean){
+        document.write("<tr>")
+        for (j in bean[i]){
+
+            if (j==0)
+            {document.write("<td><img src='/images/coffee/"+bean[i][0]+ ".png'><p>"
+                            + bean[i][j] + "</p></td>")
+
+            }
+            else{
+            document.write("<td>"+bean[i][j] + "</td>")
+        }
+        }
+        document.write("</tr>")
+    }
+    document.write("</table>")
+
+
+
+
+
+    
+</script>
+</html>

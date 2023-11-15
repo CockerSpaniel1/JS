@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">1</div>
+    <div id="demo2">2</div>
+    <div id="demo3">3</div>
+    <div id="demo4">4</div>
+    <div id="demo5">5</div>
+    <div id="demo6">6</div>
+    <div id="demo7">7</div>
+</body>
+<script>
+
+    const demo=document.getElementById("demo");
+    const demo2=document.getElementById("demo2");
+    const demo3=document.getElementById("demo3");
+    const demo4=document.getElementById("demo4");
+    const demo5=document.getElementById("demo5");
+    const demo6=document.getElementById("demo6");
+    const demo7=document.getElementById("demo7");
+
+    
+    //匿名函數
+    var coffee=function(r){
+        var kao = new Array("美式","拿鐵", "義式", "卡布")
+        return kao[r]
+    }
+
+    var r=Math.floor(Math.random()*4)
+    
+    demo.innerHTML=coffee(r);
+    // console.log(r)
+    
+    demo7.innerHTML="測試文字";
+
+    //即時匿名函數
+    (function(r){
+        var kao = new Array("美式1","拿鐵1", "義式1", "卡布1")
+        demo2.innerHTML=kao[r];
+    })(r)
+
+    //即時匿名函數2
+    (function(){
+        var kao = new Array("美式2","拿鐵2", "義式2", "卡布2")
+        var q=Math.floor(Math.random()*4)
+        demo3.innerHTML=kao[q];
+    // 改成())才能work
+    }) ();
+    //箭頭函數
+    //無參數 無傳回值
+    var myfun=()=>{demo4.innerHTML="我最愛的咖啡是美式";}
+
+
+    //有參數 無傳回值
+    //無參數 有傳回值
+    //有參數 有傳回值
+</script>
+</html>
