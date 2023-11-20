@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn">LOAD</button>
+    <div id="demo"></div>
+
+    <script>
+        btn.onclick=function(){
+            loadAJAX();
+        }
+    
+    function loadAJAX(){
+        var url="coffee.txt"
+        var xhr= new XMLHttpRequest()
+        xhr.onreadystatechange =function(){
+            if (xhr.readyState===4 && this.status===200){
+                var obj=xhr.response
+                demo.innerHTML= xhr.responseText
+            }
+        }
+    
+        xhr.open('get',url ,true)
+        xhr.send()
+        }
+    </script>   
+</body>
+</html>

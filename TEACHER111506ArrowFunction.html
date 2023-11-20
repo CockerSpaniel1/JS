@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Arrow function</title>
+</head>
+<body>
+    <div id='demo'></div>
+    <div id='demo2'></div>
+    <div id='demo3'></div>
+    <div id='demo4'></div>
+    <div id='demo5'></div>
+    <div id='demo6'></div>
+    <div id='demo7'></div>
+
+    <script>
+        const demo=document.getElementById('demo');
+        const demo2=document.getElementById('demo2');
+        const demo3=document.getElementById('demo3');
+        const demo4=document.getElementById('demo4');
+        const demo5=document.getElementById('demo5');
+        const demo6=document.getElementById('demo6');
+        const demo7=document.getElementById('demo7');
+
+        //具名函數
+        function abc(){}
+
+        //匿名函數
+        var coffee=function(r){
+            var kao=new Array("美式","拿鐵","義式","卡布");
+            return kao[r];
+        }
+
+        var r=Math.floor(Math.random()*4);   //亂數隨機產生0~3 之間的整數
+        demo.innerHTML=coffee(r);
+        console.log(r);
+
+        //即時匿名函數
+        (function(r){
+            var kao=new Array("美式","拿鐵","義式","卡布"); 
+            demo2.innerHTML=kao[r];
+        })(r);
+
+        //即時匿名函數2
+        (function(){
+            var kao=new Array("美式","拿鐵","義式","卡布"); 
+            var r=Math.floor(Math.random()*4);
+            demo3.innerHTML=kao[r];
+        })();   //空參數的即時匿名,()不可省略
+
+        //箭頭函數
+        //無參數,無傳回值
+        var myfun=()=>{demo4.innerHTML='我最愛的咖啡是美式'};
+        myfun();
+
+        //有參數,無傳回值
+        var yourfun=(name,coffee)=>{demo5.innerHTML=name + ",您最愛的咖啡是:" + coffee};
+        yourfun("艾扣扣","拿鐵");
+
+        //無參數,有傳回值
+        var hisfun=()=>"大家午安,麥肚咕,快下課了";
+        demo6.innerHTML=hisfun();
+
+        //有參數,有傳回值
+        var herfun=(price,qty)=>"咖啡售價:" + price + "元, 數量:" + qty + " ,總計:" + (price*qty);
+        demo7.innerHTML=herfun(120,3); 
+
+    </script>
+    
+</body>
+</html>

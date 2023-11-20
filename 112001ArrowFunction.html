@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <div id="demo"></div>
+    <script>
+
+    var coffee = ["美式","拿鐵", "義式", "卡布"]
+    const demo = document.getElementById("demo")
+
+    //for  
+    for (i=0; i<coffee.length ; i++)
+    {
+        demo.innerHTML += i+ coffee[i] +"<br>"
+    }
+    
+    //forEach()
+    coffee.forEach(e=>console.log(e))
+
+    demo.innerHTML += "<hr>"
+    
+    coffee.forEach(e=>demo.innerHTML += e+ "<br>")
+
+
+    demo.innerHTML += "<hr>"
+    coffee.forEach(e=>{
+        if (e ==  "拿鐵"){
+           //e.style.color = red
+           demo.innerHTML += "<span style='color:red'>" + e +"</span><br>"
+        }
+        else 
+            demo.innerHTML += e + "<br>"
+})
+
+    coffee.forEach( 
+        
+        function(e,i){
+        var r =Math.floor( Math.random() * coffee.length )
+            demo.innerHTML +=i+"&"+r
+            if (i===r)
+            demo.innerHTML += "<span style='color:red'>" + e +"</span><br>"
+            else 
+            demo.innerHTML += e + "<br>"
+    }
+
+    )
+
+
+
+
+
+   
+
+    
+    </script>
+</body>
+</html>
