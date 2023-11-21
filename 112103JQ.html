@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<script>
+     $(document).ready(function() {
+
+        $("#btn1").click(function(){
+            $("h1").hide(5000);
+            window.alert("我把h1隱藏起來了!")
+        });
+
+        $("#btn2").click(function(){
+            $("h1").hide(5000 ,function(){
+                window.alert("我把h1隱藏起來了!")
+            });
+           
+        });
+
+
+    });
+</script>
+<body>
+    <h1>welcome</h1>
+    <button id="btn1">hide1</button>
+    <button id="btn2">hide2</button>
+</body>
+</html>

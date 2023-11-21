@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+div{
+    width:50%;
+    height:25vh;
+    border: 1px solid orange;
+    overflow:scroll;
+}
+</style>
+<script>
+    
+     $(document).ready(function() {
+
+        $("#btnAjax").click(function(){
+
+            
+            $.ajax({
+                url:"coffee.txt",
+                success: function(data, status,xhr ){
+                    $("#divAjax").html(
+                        "檔案內容" + data +"<br>"
+                        +"傳送狀態" + status+"<br>"
+                        +"XHR" + xhr +"<br>"
+                    )},
+                error:()=>window.alert("無此檔案"),
+                context:document.body    
+
+            }).done(function(){
+                $("#divAjax").append('<span style="color:red">我是done之後,新增的元素</span>')
+                })
+            
+        
+        });
+   
+    });
+</script>
+<body>
+    <div id="divAjax"></div>
+    <button id="btnAjax" >載入coffee.txt</button>
+    
+    
+</body>
+</html>

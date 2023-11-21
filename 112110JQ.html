@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+
+    #ulSort li{
+        padding:15px;
+        background-color:tomato;
+        border:1px solid gray;
+        margin:8px;
+        width:25;
+        border-radius:10px;
+        cursor:pointer;
+    }
+    
+
+
+</style>
+<script>
+    
+     $(document).ready(function() {
+
+        $("#ulSort li").click(
+            function(){
+           
+            //$(this).find("li").prepend("<li>123</li>")
+            $("ul").prepend("<li>Prepended item</li>")
+            $("ul").prepend("<li>Prepended item</li>")
+  
+        })
+  
+   
+    });
+</script>
+<body>
+   
+    
+    <div id="ulSort">
+        <h1>Welcome to Cafe Time</h1>
+        <ul>
+            <li>1.咖啡的歷史起源</li>
+            <li>2.咖啡樹的品種</li>
+            <li>3.咖啡的栽培條件</li>
+            <li>4.咖啡豆的成分</li>
+            <li>5.咖啡豆的加工</li>
+            <li>6.咖啡的沖煮方式</li>
+        </ul>
+        
+        
+        </div>
+    
+</body>
+</html>

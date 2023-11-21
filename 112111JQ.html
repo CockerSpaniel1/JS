@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+
+    #ulSort li{
+        padding:15px;
+        background-color:tomato;
+        border:1px solid gray;
+        margin:8px;
+        width:25;
+        border-radius:10px;
+        cursor:pointer;
+    }
+    
+
+
+</style>
+<script>
+    
+    $(document).ready(function() {
+
+        $("input").focus( function(){
+           $(this).css("background","#DDEE77")
+     
+        });
+
+        $("input").blur( function(){
+           $(this).css("background","transparent")
+     
+        })
+  
+        $("#nickname").keydown( function(){
+            $(this).val($(this).val().toUpperCase())
+        }
+        )
+    });
+</script>
+<body>
+   
+    <input type="email" placeholder="Enter Email Address" id="email"><br>
+    <input type="password" placeholder="Enter Password" id="pwd"><br>
+    <input type="text" placeholder="Enter English Name" id="nickname"><br>
+ 
+
+  
+    
+</body>
+</html>

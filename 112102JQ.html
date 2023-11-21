@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+<style>
+    div{padding: 2rem;
+    margin: 1.5rem;}
+    .red {
+        color:red;
+        border: 1px solid orange;
+    }
+    .green {
+        color:green;
+        border: 1px solid orange;
+    }
+    .blue {
+        color:blue ;
+        border: 1px solid orange;
+    }
+    table {border: 1px solid orange;}
+</style>
+
+
+
+<script>
+
+    $(document).ready(function() {
+        $("h1").click(function(){
+            $(this).hide();
+        });
+    
+  
+        $("p").click(function(){
+            $(this).hide();
+        });
+
+        $("#btnShow").click(function(){
+            $("h1").show();
+            $("p").show();
+        });
+
+        $("#btnHide").click(function(){
+            $("h1").hide();
+            $("p").hide();
+        });
+
+        $(".red").mouseenter(function(){
+            $(this).css("background-color","red")
+            $(this).css("color","white")
+        });
+
+        $(".green").mouseenter(function(){
+            $(this).css("background-color","green").css("color","white")
+        });
+
+        $(".blue").mouseenter(function(){
+            $(this).css({"background-color":"blue","color":"white" })
+        });
+
+        $("[class]").mouseleave(function(){
+            $(".red").css({"background-color":"inherit","color":"red" })
+            $(".green").css({"background-color":"inherit","color":"green" })
+            $(".blue").css({"background-color":"inherit","color":"blue" })
+        });
+
+        $("tr:even").click(function(){
+            $(this).css("background-color","lightpink" );
+        });
+
+
+
+    });
+
+ 
+</script>
+
+</head>
+<body>
+    <h1 >Welcome to cafe time </h1>
+    <p>咖啡的歷史起源
+        咖啡的來源已無從稽考。諸多傳說之一指咖啡原產於衣索比亞（Ethiopia）西南部的咖法省高原地區，據說是一位牧羊人發現羊吃了一種植物後，變得非常興奮活潑，因此發現了咖啡。
+        
+        
+        咖啡樹的品種
+        <div class="red">
+        阿拉比卡咖啡(Arabica coffee) 
+        原產於東非伊索比亞南部的阿比西 尼亞高原，現今沿海尚有野生種。
+        </div>
+        <div class="green">
+        羅布斯塔咖啡(Robusta coffee) 
+        羅布斯塔咖啡屬於剛果咖啡的突變 種，原產於西非剛果，本種有缺乏香氣之 憾，苦味較強，酸味不足。
+        </div>
+        <div class="blue">
+        利比亞咖啡(Liberia coffee)
+        原產於西非利比亞，本種香味不佳， 苦味較強。除少數生產國自己消費外，只 有歐洲人飲用利比亞咖啡。
+        </div>
+
+    </p>
+
+
+
+    <table> 
+        <tr>
+        <td>條件</td>
+        <td>說明</td>
+        </tr>
+        <tr>
+          <td>氣候</td>
+          <td>咖啡的栽培主要是受到溫度的限制，因為咖啡樹很容易受到霜害，種植區域以熱帶地區為宜，生育期間咖啡樹喜好溫暖，成熟與收穫則宜比較乾燥天氣。</td>
+        </tr>
+    
+        <tr>
+          <td>地形與海拔高度</td>
+          <td>在熱帶地區栽種咖啡樹要特別注意海拔高度，越接近赤道越能在愈高海拔的山地栽種，如在海拔2,500公尺的高地也能種植。
+        </td>
+        </tr>
+        <tr>
+          <td>日照</td>
+          <td>咖啡樹栽培對日照的要求並不高，太強的陽光直射對咖啡樹的生長會有不利的影響</td>
+        </tr>
+        <tr>
+          <td>土壤</td>
+          <td>咖啡栽培對土壤要求不苛求，但是栽培土質以富含有機質肥沃壤土及火山岩土壤為最適宜</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+        </tr>
+    </table>
+
+    <button id="btnShow">show</button>
+    <button id="btnHide">hide</button>
+    
+</body>
+</html>

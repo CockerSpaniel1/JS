@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+div{
+    width:50%;
+    height:25vh;
+    border: 1px solid orange;
+    overflow:scroll;
+}
+</style>
+<script>
+    
+     $(document).ready(function() {
+
+        $("#btnGet").click(function(){
+
+            
+            $.get("coffee.txt", function(data, status){
+                //document.getElementById("divGet").innerHTML = xhr.responseText
+                $("#divGet").html(
+                     "檔案內容" + data +"<br>"
+                    +"傳送狀態" + status )
+
+            })
+            
+        
+        });
+
+   
+
+    });
+</script>
+<body>
+    <div id="divGet"></div>
+    <button id="btnGet" >載入coffee.txt</button>
+    
+    
+</body>
+</html>
